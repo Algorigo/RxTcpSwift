@@ -17,6 +17,8 @@
 		EECD97A228E3DA290043C587 /* RxTcpSwiftAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECD97A128E3DA290043C587 /* RxTcpSwiftAppTests.swift */; };
 		EECD97AC28E3DA290043C587 /* RxTcpSwiftAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECD97AB28E3DA290043C587 /* RxTcpSwiftAppUITests.swift */; };
 		EECD97AE28E3DA290043C587 /* RxTcpSwiftAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECD97AD28E3DA290043C587 /* RxTcpSwiftAppUITestsLaunchTests.swift */; };
+		EEFDB90D28E4289100202847 /* TestCommunication.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFDB90C28E4289100202847 /* TestCommunication.swift */; };
+		EEFDB90F28E4289C00202847 /* TestCommunication2.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFDB90E28E4289C00202847 /* TestCommunication2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		EECD97A728E3DA290043C587 /* RxTcpSwiftAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RxTcpSwiftAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EECD97AB28E3DA290043C587 /* RxTcpSwiftAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxTcpSwiftAppUITests.swift; sourceTree = "<group>"; };
 		EECD97AD28E3DA290043C587 /* RxTcpSwiftAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxTcpSwiftAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		EEFDB90C28E4289100202847 /* TestCommunication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCommunication.swift; sourceTree = "<group>"; };
+		EEFDB90E28E4289C00202847 /* TestCommunication2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCommunication2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +144,8 @@
 				EECD979328E3DA280043C587 /* Assets.xcassets */,
 				EECD979528E3DA280043C587 /* RxTcpSwiftApp.entitlements */,
 				EECD979628E3DA280043C587 /* Preview Content */,
+				EEFDB90C28E4289100202847 /* TestCommunication.swift */,
+				EEFDB90E28E4289C00202847 /* TestCommunication2.swift */,
 			);
 			path = RxTcpSwiftApp;
 			sourceTree = "<group>";
@@ -407,8 +413,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEFDB90D28E4289100202847 /* TestCommunication.swift in Sources */,
 				EECD979228E3DA260043C587 /* ContentView.swift in Sources */,
 				EECD979028E3DA260043C587 /* RxTcpSwiftAppApp.swift in Sources */,
+				EEFDB90F28E4289C00202847 /* TestCommunication2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -478,6 +486,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -536,6 +545,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -561,8 +571,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = RxTcpSwiftApp/RxTcpSwiftApp.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"RxTcpSwiftApp/Preview Content\"";
 				DEVELOPMENT_TEAM = B56B7YRWDS;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -578,7 +590,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
@@ -600,8 +612,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = RxTcpSwiftApp/RxTcpSwiftApp.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"RxTcpSwiftApp/Preview Content\"";
 				DEVELOPMENT_TEAM = B56B7YRWDS;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -617,7 +631,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
@@ -640,6 +654,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = B56B7YRWDS;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
@@ -664,6 +679,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = B56B7YRWDS;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
@@ -687,6 +703,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = B56B7YRWDS;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
@@ -710,6 +727,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = B56B7YRWDS;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
