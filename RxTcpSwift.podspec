@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "RxTcpSwift"
-  spec.version      = "0.0.2"
+  spec.version      = "0.0.3"
   spec.summary      = "Tcp Library using ReactiveX for Swift"
 
   # This description is used to generate tags and improve search results.
@@ -139,6 +139,6 @@ Pod::Spec.new do |spec|
   spec.dependency "RxSwift", "~> 6.5.0"
   spec.dependency 'RxRelay', '~> 6.5.0'
 
-  spec.swift_version = '4.0'
+  spec.swift_version = '5.1'
 
 end
