@@ -139,6 +139,6 @@ Pod::Spec.new do |spec|
   spec.dependency "RxSwift", "~> 6.5.0"
   spec.dependency 'RxRelay', '~> 6.5.0'
 
-  spec.swift_version = '4.0'
+  spec.swift_version = '5.1'
 
 end

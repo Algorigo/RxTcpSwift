@@ -70,8 +70,8 @@ public class RxTcp: NSObject {
                         outputStream.delegate = self
                         
                         // Schedule
-                        inputStream.schedule(in: .main, forMode: .defaultRunLoopMode)
-                        outputStream.schedule(in: .main, forMode: .defaultRunLoopMode)
+                        inputStream.schedule(in: .main, forMode: .default)
+                        outputStream.schedule(in: .main, forMode: .default)
 
                         // Open!
                         inputStream.open()
