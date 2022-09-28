@@ -53,8 +53,8 @@ public class RxTcp: NSObject {
         var inputStream: InputStream?
         var outputStream: OutputStream?
         var disposable: Disposable?
-        return inputOpenSubject!.ignoreElements()
-            .andThen(outputOpenSubject!.ignoreElements())
+        return inputOpenSubject!.ignoreElements().asCompletable()
+            .andThen(outputOpenSubject!.ignoreElements().asCompletable())
             .do(onCompleted: {
                 self.connectionState = .connected
                 connectionSubject.onNext(self)
@@ -70,15 +70,15 @@ public class RxTcp: NSObject {
                         outputStream.delegate = self
                         
                         // Schedule
-                        inputStream.schedule(in: .main, forMode: .default)
-                        outputStream.schedule(in: .main, forMode: .default)
+                        inputStream.schedule(in: .main, forMode: .defaultRunLoopMode)
+                        outputStream.schedule(in: .main, forMode: .defaultRunLoopMode)
 
                         // Open!
                         inputStream.open()
                         outputStream.open()
                         
                         disposable = output
-                            .observeOn(ConcurrentDispatchQueueScheduler(qos: .background))
+                            .observe(on: ConcurrentDispatchQueueScheduler(qos: .background))
                             .subscribe { [weak self] (event) in
                                 switch event {
                                 case .next(let data):
@@ -108,7 +108,7 @@ public class RxTcp: NSObject {
                     disposable?.dispose()
                 }
             })
-            .observeOn(MainScheduler.instance)
+                .observe(on: MainScheduler.instance)
     }
     
     public func getObservable() -> Observable<Data> {

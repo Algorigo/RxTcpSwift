@@ -3,3 +3,12 @@
 /Packages
 /*.xcodeproj
 xcuserdata/
+DerivedData/
+.swiftpm/config/registries.json
+.swiftpm/xcode/package.xcworkspace/contents.xcworkspacedata
+.netrc
+
+# CocoaPods
+Podfile.lock
+Pods
+*.xcworkspace
