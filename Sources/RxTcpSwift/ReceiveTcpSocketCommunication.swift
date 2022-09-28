@@ -41,6 +41,7 @@ open class ReceiveTcpSocketCommunication {
                 }
             })
             .ignoreElements()
+            .asCompletable()
     }
     
     open func verifyReceivedData(data: Data) -> (returnData: Data?, rest: Data) {

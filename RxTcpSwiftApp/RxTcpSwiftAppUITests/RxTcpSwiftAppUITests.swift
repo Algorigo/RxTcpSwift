@@ -1,13 +1,13 @@
 //
-//  AppUITests.swift
-//  AppUITests
+//  RxTcpSwiftAppUITests.swift
+//  RxTcpSwiftAppUITests
 //
-//  Created by Jaehong Yoo on 2020/12/29.
+//  Created by Jaehong Yoo on 2022/09/28.
 //
 
 import XCTest
 
-class AppUITests: XCTestCase {
+final class RxTcpSwiftAppUITests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -27,12 +27,11 @@ class AppUITests: XCTestCase {
         let app = XCUIApplication()
         app.launch()
 
-        // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
 
     func testLaunchPerformance() throws {
-        if #available(macOS 10.15, iOS 13.0, tvOS 13.0, *) {
+        if #available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 7.0, *) {
             // This measures how long it takes to launch your application.
             measure(metrics: [XCTApplicationLaunchMetric()]) {
                 XCUIApplication().launch()
